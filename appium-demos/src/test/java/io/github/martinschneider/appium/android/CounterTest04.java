@@ -6,61 +6,68 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.openqa.selenium.WebElement;
 
+/**
+ *
+ *
+ * <h2>Demo Appium test for Android Counter app #4</h2>
+ *
+ * Test: Increase the counter multiple times and verify
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>compare the execution time of different locator strategies
+ *   <li>using JUnit parameterized test
+ * </ul>
+ */
 @TestInstance(Lifecycle.PER_CLASS)
-public class CounterTest04 extends BaseTest {
+public class CounterTest04 extends CounterBaseTest {
 
   @AndroidFindBy(id = ID_PREFIX + "counterLabel")
   private WebElement counter;
 
   @AndroidFindBy(id = ID_PREFIX + "incrementButton")
-  private WebElement incrementButtonId;
+  private static WebElement incrementButtonId;
 
   @AndroidFindBy(xpath = "//*[@resource-id=\"me.tsukanov.counter:id/incrementButton\"]")
-  private WebElement incrementButtonXPath1;
+  private static WebElement incrementButtonXPath1;
 
   @AndroidFindBy(
       xpath =
           "//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.support.v4.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.Button[1]")
-  private WebElement incrementButtonXPath2;
+  private static WebElement incrementButtonXPath2;
 
   @AndroidFindBy(
       uiAutomator = "new UiSelector().resourceId(\"me.tsukanov.counter:id/incrementButton\")")
-  private WebElement incrementButtonUIAutomator1;
+  private static WebElement incrementButtonUIAutomator1;
 
   @AndroidFindBy(uiAutomator = "new UiSelector().text(\"+\")")
-  private WebElement incrementButtonUIAutomator2;
+  private static WebElement incrementButtonUIAutomator2;
 
   private PointOption<ElementOption> counterCoordinates =
       new PointOption<ElementOption>().withCoordinates(105, 540);
 
-  @Test
-  public void testCounterIncreaseId() {
-    testCounterIncrease(incrementButtonId, 10);
+  @ParameterizedTest
+  @MethodSource("provideWebElements")
+  public void testCounterIncrease(WebElement incrementButton) {
+    testCounterIncrease(incrementButton, 10);
   }
 
-  @Test
-  public void testCounterIncreaseXPath1() {
-    testCounterIncrease(incrementButtonXPath1, 10);
-  }
-
-  @Test
-  public void testCounterIncreaseXPath2() {
-    testCounterIncrease(incrementButtonXPath2, 10);
-  }
-
-  @Test
-  public void testCounterIncreaseUIAutomator1() {
-    testCounterIncrease(incrementButtonUIAutomator1, 10);
-  }
-
-  @Test
-  public void testCounterIncreaseUIAutomator2() {
-    testCounterIncrease(incrementButtonUIAutomator2, 10);
+  private static Stream<WebElement> provideWebElements() {
+    return Stream.of(
+        incrementButtonId,
+        incrementButtonXPath1,
+        incrementButtonXPath2,
+        incrementButtonUIAutomator1,
+        incrementButtonUIAutomator2);
   }
 
   @Test

@@ -13,14 +13,15 @@ import org.openqa.selenium.support.PageFactory;
 public class BaseTest {
   protected AndroidDriver<WebElement> driver;
 
-  protected static final String ID_PREFIX = "me.tsukanov.counter:id/";
+  protected static String appPath;
+
+  protected DesiredCapabilities capabilities = new DesiredCapabilities();
 
   @BeforeAll
   public void setUp() throws IOException {
     File classpathRoot = new File(System.getProperty("user.dir"));
     File appDir = new File(classpathRoot, "apps");
-    File app = new File(appDir.getCanonicalPath(), "counter.apk");
-    DesiredCapabilities capabilities = new DesiredCapabilities();
+    File app = new File(appDir.getCanonicalPath(), appPath);
     capabilities.setCapability("deviceName", "Android Emulator");
     capabilities.setCapability("automationName", "UiAutomator2");
     capabilities.setCapability("app", app.getAbsolutePath());

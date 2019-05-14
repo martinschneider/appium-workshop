@@ -13,6 +13,20 @@ import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+/**
+ *
+ *
+ * <h2>Demo Appium test for Android Counter app #1</h2>
+ *
+ * Test: Increase the counter by one and verify
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>starting a WebDriver
+ *   <li>locate elements by id
+ * </ul>
+ */
 @TestInstance(Lifecycle.PER_CLASS)
 public class CounterTest01 {
   private AndroidDriver<WebElement> driver;
@@ -34,7 +48,7 @@ public class CounterTest01 {
     driver.quit();
   }
 
-  @Test()
+  @Test
   public void testCounterIncrease() {
     AndroidElement counter =
         (AndroidElement) driver.findElementById("me.tsukanov.counter:id/counterLabel");

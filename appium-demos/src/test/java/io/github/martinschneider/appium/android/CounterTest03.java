@@ -11,8 +11,21 @@ import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.openqa.selenium.WebElement;
 
+/**
+ *
+ *
+ * <h2>Demo Appium test for Android Counter app #3</h2>
+ *
+ * Test: Increase the counter by one and verify
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>different location strategies
+ * </ul>
+ */
 @TestInstance(Lifecycle.PER_CLASS)
-public class CounterTest03 extends BaseTest {
+public class CounterTest03 extends CounterBaseTest {
 
   @AndroidFindBy(id = ID_PREFIX + "counterLabel")
   private WebElement counter;

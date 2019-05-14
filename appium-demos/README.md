@@ -2,8 +2,8 @@
 
 ## Setup
 
-* Uses TestNG and was built and tested on IntelliJ
+* Uses JUnit 5 and was built and tested on Eclipse
 
 ## Running Tests
 
-* Can be run from IntelliJ the way tests normally are run
+* Can be run from Eclipse or IntelliJ the way tests normally are run
