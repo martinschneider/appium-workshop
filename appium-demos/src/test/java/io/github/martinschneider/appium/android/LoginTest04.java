@@ -22,6 +22,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * <ul>
  *   <li>explicit wait
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class LoginTest04 extends CarousellBaseTest {

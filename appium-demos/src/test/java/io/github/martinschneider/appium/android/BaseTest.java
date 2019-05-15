@@ -10,6 +10,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Base class for all our Appium tests.
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
+ */
 public class BaseTest {
   protected AndroidDriver<WebElement> driver;
 
@@ -32,5 +37,10 @@ public class BaseTest {
   @AfterAll
   public void tearDown() {
     driver.quit();
+  }
+
+  // ignore this ;-) see LoginTest07
+  protected <T> T testdata(Class<T> type, String name) {
+    return null;
   }
 }

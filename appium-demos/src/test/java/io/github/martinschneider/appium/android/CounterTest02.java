@@ -21,6 +21,8 @@ import org.openqa.selenium.WebElement;
  *   <li>refactor WebDriver handling into Base class
  *   <li>locate elements using private fields and annotations
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class CounterTest02 extends CounterBaseTest {

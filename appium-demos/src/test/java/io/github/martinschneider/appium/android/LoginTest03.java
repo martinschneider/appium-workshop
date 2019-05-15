@@ -21,6 +21,8 @@ import org.openqa.selenium.By;
  * <ul>
  *   <li>implicit wait
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class LoginTest03 extends CarousellBaseTest {

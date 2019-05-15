@@ -20,6 +20,8 @@ import org.openqa.selenium.By;
  * <ul>
  *   <li>we need to take care of loading times and network lag
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class LoginTest01 extends CarousellBaseTest {

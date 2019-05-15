@@ -27,6 +27,8 @@ import org.openqa.selenium.WebElement;
  *   <li>compare the execution time of different locator strategies
  *   <li>using JUnit parameterized test
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class CounterTest04 extends CounterBaseTest {

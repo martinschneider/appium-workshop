@@ -20,6 +20,8 @@ import org.openqa.selenium.By;
  * <ul>
  *   <li>static wait (please don't use)
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class LoginTest02 extends CarousellBaseTest {

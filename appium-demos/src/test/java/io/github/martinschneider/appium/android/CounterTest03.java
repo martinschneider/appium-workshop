@@ -23,6 +23,8 @@ import org.openqa.selenium.WebElement;
  * <ul>
  *   <li>different location strategies
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class CounterTest03 extends CounterBaseTest {

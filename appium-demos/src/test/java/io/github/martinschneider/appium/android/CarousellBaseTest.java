@@ -3,6 +3,11 @@ package io.github.martinschneider.appium.android;
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_ACTIVITY;
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_PACKAGE;
 
+/**
+ * Base class for testing the Carousell (www.carousell.com) app.
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
+ */
 public class CarousellBaseTest extends BaseTest {
 
   // set this according to your account

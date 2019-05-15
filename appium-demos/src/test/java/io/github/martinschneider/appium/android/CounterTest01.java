@@ -26,6 +26,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  *   <li>starting a WebDriver
  *   <li>locate elements by id
  * </ul>
+ *
+ * @author Martin Schneider, mart.schneider@gmail.com
  */
 @TestInstance(Lifecycle.PER_CLASS)
 public class CounterTest01 {
