@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -42,7 +43,7 @@ public class CounterTest01 {
     capabilities.setCapability("deviceName", "Android Emulator");
     capabilities.setCapability("app", app.getAbsolutePath());
     capabilities.setCapability("automationName", "UiAutomator2");
-    driver = new AndroidDriver<WebElement>(capabilities);
+    driver = new AndroidDriver<WebElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
   }
 
   @AfterAll

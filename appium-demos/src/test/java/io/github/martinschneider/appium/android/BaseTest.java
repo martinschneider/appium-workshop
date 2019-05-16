@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebElement;
@@ -30,7 +31,7 @@ public class BaseTest {
     capabilities.setCapability("deviceName", "Android Emulator");
     capabilities.setCapability("automationName", "UiAutomator2");
     capabilities.setCapability("app", app.getAbsolutePath());
-    driver = new AndroidDriver<WebElement>(capabilities);
+    driver = new AndroidDriver<WebElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
     PageFactory.initElements(new AppiumFieldDecorator(driver), this);
   }
 
