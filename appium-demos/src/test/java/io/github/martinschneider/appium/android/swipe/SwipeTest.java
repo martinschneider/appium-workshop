@@ -13,9 +13,27 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+/**
+ *
+ *
+ * <h2>Demo Appium Swipe Actions</h2>
+ *
+ * Test: Swipe up,down, left and right
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>Detecting coordinates</li>
+ *   <li>Different swiping actions</li>
+ * </ul>
+ *
+ * @author Syam Sasi, syamsasi99@gmail.com
+ *
+ *
+ */
 public class SwipeTest extends BaseTest {
 
-  private void doSwipe(String direction) throws InterruptedException {
+  protected void doSwipe(String direction) throws InterruptedException {
 
     TouchAction touch = new TouchAction((MobileDriver) driver);
     TouchAction swipe = null;
@@ -91,22 +109,7 @@ public class SwipeTest extends BaseTest {
     return rootElement;
   }
 
-  @Test
-  public void swipeTest() throws InterruptedException {
-    goToNativeComponents();
-    if (driver instanceof AndroidDriver) {
-
-      doSwipe("right");
-      doSwipe("down");
-      doSwipe("up");
-      doSwipe("left");
-    } else {
-      doSwipe("down");
-      doSwipe("up");
-    }
-  }
-
-  private void goToNativeComponents() throws InterruptedException {
+  protected void goToNativeComponents() throws InterruptedException {
 
     if (driver instanceof AndroidDriver) {
       MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("ReferenceApp");

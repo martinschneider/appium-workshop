@@ -7,7 +7,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.github.martinschneider.appium.android.swipe.AppiumHelper;
 import static org.assertj.core.api.Assertions.assertThat;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,6 +15,23 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ *
+ *
+ * <h2>Demo Input a text on iOS Simulator textfield</h2>
+ *
+ * Test: Enter a text on textfield
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>How to run a basic appium script on ios simulator</li>
+ * </ul>
+ *
+ * @author Syam Sasi, syamsasi99@gmail.com
+ *
+ *
+ */
 public class IOSTest {
     AppiumDriver<MobileElement> driver;
     @BeforeClass

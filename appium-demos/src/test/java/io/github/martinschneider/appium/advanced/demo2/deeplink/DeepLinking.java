@@ -14,11 +14,28 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ *
+ *
+ * <h2>Demo Deeplinking in Appium</h2>
+ *
+ * Test: Login with Deeplink
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>The execution time saving with deeplink</li>
+ * </ul>
+ *
+ * @author Syam Sasi, syamsasi99@gmail.com
+ *
+ * Ref: https://appiumpro.com/editions/7
+ *
+ */
 @RunWith(JUnit4.class)
 public class DeepLinking {
 
   private String APP_IOS = System.getProperty("user.dir") + "/apps/TheApp.app";
-
   private String AUTH_USER = "alice";
   private String AUTH_PASS = "mypassword";
 

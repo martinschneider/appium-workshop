@@ -4,16 +4,12 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
 import org.apache.commons.io.FileUtils;
-import org.hamcrest.Matchers;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -22,9 +18,25 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Base64;
-import java.util.HashMap;
 import java.util.List;
 
+/**
+ *
+ *
+ * <h2>Demo Screen recording in appium</h2>
+ *
+ * Test: Record the test execution video
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>Usage of the Video Record Options in Appium</li>
+ * </ul>
+ *
+ * @author Syam Sasi, syamsasi99@gmail.com
+ *
+ *
+ */
 public class ScreenRecord {
 
   private String APP_IOS = System.getProperty("user.dir") + "/apps/TheApp.app";
@@ -34,7 +46,6 @@ public class ScreenRecord {
 
   private static By pickerScreen = MobileBy.AccessibilityId("Picker Demo");
   private static By pickers = MobileBy.className("XCUIElementTypePickerWheel");
-  private static By learnMoreBtn = MobileBy.AccessibilityId("learnMore");
 
   @Before
   public void setUp() throws IOException {

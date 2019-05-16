@@ -15,11 +15,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ *
+ *
+ * <h2>Demo Optional Intent Arguments in Appium</h2>
+ *
+ * Test: Login with Optional Intent Arguments
+ *
+ * <p>Learning points:
+ *
+ * <ul>
+ *   <li>The execution time saving with Optional Intent Arguments</li>
+ * </ul>
+ *
+ * @author Syam Sasi, syamsasi99@gmail.com
+ *
+ *
+ */
 @RunWith(JUnit4.class)
 public class OptionalIntentArguments {
 
   private String APP_IOS = "/Users/carousell/Desktop/Carousell.app";
-
   private String AUTH_USER = "tvm.appium.demo";
 
   @Test
@@ -30,7 +46,7 @@ public class OptionalIntentArguments {
   }
 
   @Test
-  public void testIntentAgs() throws IOException {
+  public void testIntentAgs() throws IOException, InterruptedException {
     IOSModel model = new IOSModel();
     IOSDriver driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), model.procesArCaps);
     runIntentArgTest(driver, model);
@@ -51,11 +67,9 @@ public class OptionalIntentArguments {
     }
   }
 
-  private void runIntentArgTest(AppiumDriver driver, Model model) {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
-
+  private void runIntentArgTest(AppiumDriver driver, Model model) throws InterruptedException {
     try {
-      wait.until(ExpectedConditions.presenceOfElementLocated(model.seeTheSellButton()));
+      Thread.sleep(5000);
     } finally {
       driver.quit();
     }
@@ -69,8 +83,6 @@ public class OptionalIntentArguments {
 
     public DesiredCapabilities caps;
     public DesiredCapabilities procesArCaps;
-
-    public abstract By seeTheSellButton();
   }
 
   public class IOSModel extends Model {
@@ -93,8 +105,5 @@ public class OptionalIntentArguments {
           "processArguments", String.format("{\"args\": [\"%s\",\"%s\"]}", AUTH_USER, AUTH_PASS));
     }
 
-    public By seeTheSellButton() {
-      return MobileBy.AccessibilityId("header_page_sell_button");
-    }
   }
 }
