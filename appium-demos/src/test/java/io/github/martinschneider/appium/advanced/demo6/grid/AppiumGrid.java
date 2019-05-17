@@ -28,9 +28,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class AppiumGrid {
 
   /**
-   * java -cp *:. org.openqa.grid.selenium.GridLauncherV3 -role hub -port 4443 appium --nodeconfig
-   * node-config-device4724.json -p 4724 -cp 4726 appium --nodeconfig node-config-device4725.json -p
-   * 4725 -cp 2727
+   * java -cp *:. org.openqa.grid.selenium.GridLauncherV3 -role hub -port 4443
+   * appium --nodeconfig node-config-device4724.json -p 4724 -cp 4726
+   * appium --nodeconfig node-config-device4725.json -p 4725 -cp 2727
    */
   private String APP = System.getProperty("user.dir") + "/apps/TheApp.apk";
 

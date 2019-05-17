@@ -12,6 +12,7 @@ import java.net.URL;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
@@ -29,6 +30,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  *
  * @author Syam Sasi, syamsasi99@gmail.com
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class IOSTest {
   AppiumDriver<MobileElement> driver;
 

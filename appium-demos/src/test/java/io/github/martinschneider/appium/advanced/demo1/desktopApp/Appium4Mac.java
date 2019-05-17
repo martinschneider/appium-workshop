@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,6 +30,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @author Syam Sasi, syamsasi99@gmail.com
  *     <p>Ref: https://appiumpro.com/editions/52
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Appium4Mac implements Secret {
 
   private AppiumDriver driver;
