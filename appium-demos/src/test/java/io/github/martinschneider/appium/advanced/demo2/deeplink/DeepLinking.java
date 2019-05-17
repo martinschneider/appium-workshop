@@ -3,16 +3,13 @@ package io.github.martinschneider.appium.advanced.demo2.deeplink;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import java.io.IOException;
+import java.net.URL;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.IOException;
-import java.net.URL;
 
 /**
  *
@@ -24,15 +21,12 @@ import java.net.URL;
  * <p>Learning points:
  *
  * <ul>
- *   <li>The execution time saving with deeplink</li>
+ *   <li>The execution time saving with deeplink
  * </ul>
  *
  * @author Syam Sasi, syamsasi99@gmail.com
- *
- * Ref: https://appiumpro.com/editions/7
- *
+ *     <p>Ref: https://appiumpro.com/editions/7
  */
-@RunWith(JUnit4.class)
 public class DeepLinking {
 
   private String APP_IOS = System.getProperty("user.dir") + "/apps/TheApp.app";

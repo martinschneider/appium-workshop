@@ -1,9 +1,8 @@
 package io.github.martinschneider.appium.android.swipe;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import java.net.MalformedURLException;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -23,7 +22,7 @@ import java.net.MalformedURLException;
  */
 public class IOSSwipeTest extends SwipeTest {
 
-  @BeforeClass
+  @BeforeAll
   public void setPlatform() throws MalformedURLException {
     launchApp("ios");
   }

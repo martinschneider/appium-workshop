@@ -3,22 +3,21 @@ package io.github.martinschneider.appium.advanced.demo5.screenRecord;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSStartScreenRecordingOptions;
-import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Base64;
 import java.util.List;
+import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
@@ -30,12 +29,10 @@ import java.util.List;
  * <p>Learning points:
  *
  * <ul>
- *   <li>Usage of the Video Record Options in Appium</li>
+ *   <li>Usage of the Video Record Options in Appium
  * </ul>
  *
  * @author Syam Sasi, syamsasi99@gmail.com
- *
- *
  */
 public class ScreenRecord {
 
@@ -47,7 +44,7 @@ public class ScreenRecord {
   private static By pickerScreen = MobileBy.AccessibilityId("Picker Demo");
   private static By pickers = MobileBy.className("XCUIElementTypePickerWheel");
 
-  @Before
+  @BeforeEach
   public void setUp() throws IOException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("platformName", "iOS");
@@ -59,7 +56,7 @@ public class ScreenRecord {
     wait = new WebDriverWait(driver, 10);
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     if (driver != null) {
       driver.quit();
@@ -86,7 +83,6 @@ public class ScreenRecord {
     // use the sendKeys method to set the picker wheel values directly
     pickerEls.get(0).sendKeys("March");
     pickerEls.get(1).sendKeys("6");
-
 
     Thread.sleep(5000);
 

@@ -7,17 +7,12 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterMethod;
-
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.junit.jupiter.api.AfterEach;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-/**
- *
- * Setting android and ios capabilities here
- *
- */
+/** Setting android and ios capabilities here */
 public class BaseTest {
   protected static AppiumDriver<MobileElement> driver;
 
@@ -53,7 +48,7 @@ public class BaseTest {
     }
   }
 
-  @AfterMethod
+  @AfterEach
   public void quitApp() {
     if (driver != null) {
       driver.quit();

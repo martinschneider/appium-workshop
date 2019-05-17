@@ -2,17 +2,16 @@ package io.github.martinschneider.appium.advanced.demo1.desktopApp;
 
 import io.appium.java_client.AppiumDriver;
 import io.github.martinschneider.appium.advanced.secret.Secret;
+import java.io.IOException;
+import java.net.URL;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
-import java.net.URL;
 
 /**
  *
@@ -24,19 +23,17 @@ import java.net.URL;
  * <p>Learning points:
  *
  * <ul>
- *   <li>Understand Appium for mac</li>
+ *   <li>Understand Appium for mac
  * </ul>
  *
  * @author Syam Sasi, syamsasi99@gmail.com
- *
- * Ref: https://appiumpro.com/editions/52
- *
+ *     <p>Ref: https://appiumpro.com/editions/52
  */
 public class Appium4Mac implements Secret {
 
   private AppiumDriver driver;
 
-  @BeforeClass
+  @BeforeAll
   public void setUp() throws IOException {
     DesiredCapabilities caps = new DesiredCapabilities();
 
@@ -47,7 +44,7 @@ public class Appium4Mac implements Secret {
     driver = new AppiumDriver(new URL("http://localhost:4723/wd/hub"), caps);
   }
 
-  @AfterClass
+  @AfterAll
   public void tearDown() {
     try {
       driver.quit();
@@ -77,6 +74,6 @@ public class Appium4Mac implements Secret {
             ExpectedConditions.visibilityOf(
                 driver.findElementByXPath(
                     baseAXPath + "/AXScrollArea/AXOutline/AXRow[0]/AXStaticText")));
-    Assert.assertEquals(" node", firstRow.getText());
+    Assertions.assertEquals(" node", firstRow.getText());
   }
 }

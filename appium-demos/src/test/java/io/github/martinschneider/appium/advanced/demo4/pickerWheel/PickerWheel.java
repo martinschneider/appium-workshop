@@ -2,18 +2,17 @@ package io.github.martinschneider.appium.advanced.demo4.pickerWheel;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.List;
 
 /**
  *
@@ -29,8 +28,6 @@ import java.util.List;
  * </ul>
  *
  * @author Syam Sasi, syamsasi99@gmail.com
- *
- *
  */
 public class PickerWheel {
 
@@ -42,7 +39,7 @@ public class PickerWheel {
   private static By pickerScreen = MobileBy.AccessibilityId("Picker Demo");
   private static By pickers = MobileBy.className("XCUIElementTypePickerWheel");
 
-  @Before
+  @BeforeEach
   public void setUp() throws IOException {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("platformName", "iOS");
@@ -54,7 +51,7 @@ public class PickerWheel {
     wait = new WebDriverWait(driver, 10);
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     if (driver != null) {
       driver.quit();
