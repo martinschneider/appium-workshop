@@ -10,5 +10,5 @@ jdk:
 cache:
   directories: $HOME/.m2
 script:
- - cd appium-demo
+ - cd appium-demos
  - mvn install
