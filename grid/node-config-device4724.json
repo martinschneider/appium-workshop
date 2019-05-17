@@ -1,0 +1,28 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "Pixel1",
+          "deviceName": "emulator-5554",
+          "udid": "emulator-5554",
+          "maxInstances": 1,
+          "systemPort":5724,
+          "platformName":"android"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":2000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://localhost:4724/wd/hub",
+    "host": "localhost",
+    "port": 4724,
+    "maxSession": 1,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4443,
+    "hubHost": "localhost",
+    "hubProtocol": "http"
+  }
+}

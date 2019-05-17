@@ -10,5 +10,4 @@ jdk:
 cache:
   directories: $HOME/.m2
 script:
- - cd appium-demos
- - mvn install
+ - mvn install -DskipTests=true
