@@ -1,6 +1,6 @@
 # Java samples code for Appium workshop
 
-[![Build Status](https://travis-ci.com/martinschneider/appiumWorkshopTrivandrum.svg?branch=master)](https://travis-ci.com/martinschneider/appiumWorkshopTrivandrum)
+[![Build Status](https://travis-ci.com/martinschneider/appium-workshop.svg?branch=master)](https://travis-ci.com/martinschneider/appium-workshop)
 
 http://techforum.prathidhwani.org/appium/index.html
 
