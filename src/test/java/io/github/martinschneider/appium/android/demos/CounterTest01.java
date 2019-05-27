@@ -1,4 +1,4 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.demos;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -54,7 +54,7 @@ public class CounterTest01 {
   @Test
   public void testCounterIncrease() {
     AndroidElement counter =
-        (AndroidElement) driver.findElementById("me.tsukanov.counter:id/counterLabel");
+        (AndroidElement) driver.findElementById("me.tsukanov.counter:id/counterLabel13246");
     for (int i = 1; i <= 10; i++) {
       int oldCount = Integer.parseInt(counter.getText());
       counter.click();

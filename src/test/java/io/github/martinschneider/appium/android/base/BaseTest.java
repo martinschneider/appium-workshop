@@ -1,4 +1,4 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.base;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;

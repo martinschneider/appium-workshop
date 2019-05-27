@@ -1,4 +1,4 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.base;
 
 /**
  * Base class for testing the counter app.

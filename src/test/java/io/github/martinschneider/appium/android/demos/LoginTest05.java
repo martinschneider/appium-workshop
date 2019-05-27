@@ -1,7 +1,7 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.demos;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+import io.github.martinschneider.appium.android.base.CarousellBaseTest;
 import io.github.martinschneider.appium.android.model.pageobjects.HomePage;
 import io.github.martinschneider.appium.android.model.pageobjects.LoginPage;
 import io.github.martinschneider.appium.android.model.pageobjects.WelcomePage;
