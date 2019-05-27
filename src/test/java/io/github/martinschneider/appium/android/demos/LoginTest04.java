@@ -37,7 +37,7 @@ public class LoginTest04 extends CarousellBaseTest {
 
   @Test
   public void testLogin() {
-    WebDriverWait wait = new WebDriverWait(driver, 15);
+    WebDriverWait wait = new WebDriverWait(driver, 10);
     wait.until(presenceOfElementLocated(welcomePageLoginButton)).click();
     wait.until(presenceOfElementLocated(usernameField)).sendKeys(username);
     driver.findElement(passwordField).sendKeys(password);

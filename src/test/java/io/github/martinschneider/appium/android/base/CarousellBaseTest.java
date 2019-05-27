@@ -12,7 +12,7 @@ public class CarousellBaseTest extends BaseTest {
 
   // set this according to your account
   protected String username = "tvm.appium.demo";
-  protected String password = "654321";
+  protected String password = "";
 
   public CarousellBaseTest() {
     super();

@@ -14,6 +14,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import io.appium.java_client.android.AndroidDriver;
 
+/**
+ * Spring configuration
+ * 
+ * @author Martin Schneider 
+ */
 @Configuration
 @ComponentScan(basePackages = "io.github.martinschneider.appium.android.model.pageobjects.spring")
 public class SpringConfig {

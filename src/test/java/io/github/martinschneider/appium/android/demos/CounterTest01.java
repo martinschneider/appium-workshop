@@ -54,7 +54,7 @@ public class CounterTest01 {
   @Test
   public void testCounterIncrease() {
     AndroidElement counter =
-        (AndroidElement) driver.findElementById("me.tsukanov.counter:id/counterLabel13246");
+        (AndroidElement) driver.findElementById("me.tsukanov.counter:id/counterLabel");
     for (int i = 1; i <= 10; i++) {
       int oldCount = Integer.parseInt(counter.getText());
       counter.click();
