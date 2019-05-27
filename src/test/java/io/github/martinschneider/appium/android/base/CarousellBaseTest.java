@@ -1,4 +1,4 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.base;
 
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_ACTIVITY;
 import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_PACKAGE;
@@ -11,8 +11,8 @@ import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_PACKA
 public class CarousellBaseTest extends BaseTest {
 
   // set this according to your account
-  protected String username = "101test";
-  protected String password = "test456";
+  protected String username = "tvm.appium.demo";
+  protected String password = "";
 
   public CarousellBaseTest() {
     super();

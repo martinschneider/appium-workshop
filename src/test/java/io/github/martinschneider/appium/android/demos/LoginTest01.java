@@ -1,8 +1,9 @@
-package io.github.martinschneider.appium.android;
+package io.github.martinschneider.appium.android.demos;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import io.appium.java_client.MobileBy;
+import io.github.martinschneider.appium.android.base.CarousellBaseTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
