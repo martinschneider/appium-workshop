@@ -3,13 +3,11 @@ package io.github.martinschneider.appium.android.demos;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.iOSFindBy;
 import io.github.martinschneider.appium.android.base.CounterBaseTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 /**
  *

@@ -4,7 +4,7 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 /**
  * Base class for Spring based tests
- * 
+ *
  * @author Martin Schneider
  */
 @SpringJUnitConfig(SpringConfig.class)
